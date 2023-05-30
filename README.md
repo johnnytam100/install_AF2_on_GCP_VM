@@ -54,18 +54,18 @@ cd ./alphafold
 mkdir ~/script/alphafold_database/
 scripts/download_all_data.sh ~/script/alphafold_database/
 
-# Create conda env for AlphaFold2
+# Build AlphaFold2 docker
 docker build -f docker/Dockerfile -t alphafold .
-conda create -n AlphaFold python=3.8
-pip3 install -r docker/requirements.txt
 
+# Create conda env for AlphaFold2
+conda create -n AlphaFold python=3.8
+conda activate AlphaFold
+pip3 install -r docker/requirements.txt
 
 # Restart VM (i.e. stop it on GCP, start it again)
 
 # Test AlphaFold2
-mkdir ~/test
-mkdir ~/test/test_af2
-cd ~/test/test_af2
+mkdir ~/test; mkdir ~/test/test_af2; cd ~/test/test_af2
 touch example.fasta
 echo “>example” >> example.fasta
 echo “MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQRESTLHLVLRLRGG” >> example.fasta
