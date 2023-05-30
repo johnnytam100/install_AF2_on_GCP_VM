@@ -1,5 +1,6 @@
 # install_AF2_on_GCP_VM
 
+```
 # Create GCP VM with following spec
 # GPU: A100, 40GB
 # Disk: 4096 GB, SSD permanent
@@ -74,3 +75,4 @@ python3 /home/chunlai_tam/script/alphafold/docker/run_docker.py \
   --max_template_date=2022-01-01 \
   --data_dir=/home/chunlai_tam/script/alphafold_database/ \
   --output_dir=/home/chunlai_tam/test/test_af2/
+```
