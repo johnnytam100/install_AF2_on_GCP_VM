@@ -1,4 +1,4 @@
-# install_AF2_on_GCP_VM
+# install_AlphaFold2_on_GCP_VM
 
 ```
 # Create GCP VM with following spec
