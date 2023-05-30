@@ -67,8 +67,8 @@ pip3 install -r docker/requirements.txt
 # Test AlphaFold2
 mkdir ~/test; mkdir ~/test/test_af2; cd ~/test/test_af2
 touch example.fasta
-echo “>example” >> example.fasta
-echo “MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQRESTLHLVLRLRGG” >> example.fasta
+echo \>example >> example.fasta
+echo MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQRESTLHLVLRLRGG >> example.fasta
 
 python3 /home/chunlai_tam/script/alphafold/docker/run_docker.py \
   --fasta_paths=/home/chunlai_tam/test/test_af2/example.fasta \
